@@ -24,4 +24,9 @@ lines(Power_Subset$DateTime, Power_Subset$Sub_metering_3, col='blue')
 legend('topright', c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty = c(1,1,1),col = c('black', 'red', 'blue'),bty = 'n')
 
 ## Plot 4
+with(Power_Subset, plot(DateTime, Global_reactive_power, xlab='datetime', pch=NA))
+with(Power_Subset, lines(DateTime, Global_reactive_power))
+
+## Closing the file
+dev.off()
 
